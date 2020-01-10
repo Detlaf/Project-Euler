@@ -1,11 +1,9 @@
-def sum_square_diff():
-    sum_of_squares = 0
-    squared_sum = 0
-    for i in range(1, 101):
-        sum_of_squares += i ** 2
-        squared_sum += i
+def sum_square_diff(n):
+    squared_sum = n * (n + 1) / 2
     squared_sum = squared_sum ** 2
 
-    return (squared_sum - sum_of_squares)
+    sum_of_squares = (n * (2*n**2 + 3*n + 1)) / 6
 
-print(sum_square_diff())
+    return int(squared_sum - sum_of_squares)
+
+print(sum_square_diff(100))
